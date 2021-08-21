@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <title>Room Details</title>
+  <link rel="stylesheet" href="room-details.component.css">
+
+</head>
+
+<body>
+  <div class="container" [(ngModel)]="room_num" name="room_num">
+    <div class="one">
+      <div class="card" style="width: 18rem;" *ngFor="let room of rooms;let idx=index;">
+        <div class="card header"></div>
+        <div class="card body">
+          <div>
+            <ul class="list-group list-group-flush">
+              <!-- <option> -->
+              
+              <p value="room_num">Room Number: {{room.room_number}}</p>
+              <p>Room Type: {{room.room_type}}</p>
+              <p>Price: {{room.price}}</p>
+              <!-- </option> -->
+
+              <button (click)="bookRoom()" class="btn btn-info">Next</button>
+            </ul>
+          </div>
+        </div>
+        <div class="card footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
